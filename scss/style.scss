@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a2b3c;
+}
+
+.indicator-rating-neumorphism {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: -1px -1px 2px rgba(255,255,255,0.25),
+        inset 2px 2px 5px rgba(255,255,255,0.25),
+               8px 30px 30px rgba(0,0,0,0.4),
+        inset -2px -2px 5px rgba(0,0,0,0.3);
+  transition: 500ms;
+  
+  position: relative;
+  
+  &:hover &__skill {
+    transition: 500ms;
+    filter: blur(3px);
+    opacity: 0.2;
+  }
+
+  &__title {
+    font-weight: 500;
+    color:#1f9cff;
+
+    margin: 10px 0 25px 0;
+  }
+
+  &__skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -1px -1px 2px rgba(255,255,255,0.25),
+          inset 2px 2px 5px rgba(255,255,255,0.25),
+                 8px 30px 30px rgba(0,0,0,0.4),
+          inset -2px -2px 5px rgba(0,0,0,0.3);
+    padding: 10px;
+
+    margin: 10px 0;
+    &:hover {
+      filter: blur(0px)!important;
+      opacity: 1!important;
+    }
+  }
+
+  &__name {
+    min-width: 200px;
+    text-align: right;
+    padding-right: 20px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &__rating {
+    display: flex;
+    flex-direction: row-reverse;
+
+    position: relative;
+    margin: 10px 0;
+  }
+
+  &__radio {
+    display: flex;
+    width: 20px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden;
+
+    position: relative;
+    &::after {
+      content: url(../star.svg);    
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      z-index: 10;
+      transition: 500ms;
+
+      position: absolute;
+      left: 4px;
+    }
+    &:nth-child(2n+1)::after {
+      right: 4px;
+      left: initial;
+    }
+    &:hover ~ &::after,
+    &:hover::after,
+    &:checked ~ &::after,
+    &:checked::after {
+      content: url(../star-b.svg);  
+    }
+  }
+}

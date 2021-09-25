@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #0a2b3c;
+}
+
+.indicator-rating-neumorphism {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), 8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), 8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  position: relative;
+}
+.indicator-rating-neumorphism:hover .indicator-rating-neumorphism__skill {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.2;
+}
+.indicator-rating-neumorphism__title {
+  font-weight: 500;
+  color: #1f9cff;
+  margin: 10px 0 25px 0;
+}
+.indicator-rating-neumorphism__skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), 8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), 8px 30px 30px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 10px 0;
+}
+.indicator-rating-neumorphism__skill:hover {
+  -webkit-filter: blur(0px) !important;
+          filter: blur(0px) !important;
+  opacity: 1 !important;
+}
+.indicator-rating-neumorphism__name {
+  min-width: 200px;
+  text-align: right;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.indicator-rating-neumorphism__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  position: relative;
+  margin: 10px 0;
+}
+.indicator-rating-neumorphism__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  overflow: hidden;
+  position: relative;
+}
+.indicator-rating-neumorphism__radio::after {
+  content: url(../star.svg);
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  z-index: 10;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  position: absolute;
+  left: 4px;
+}
+.indicator-rating-neumorphism__radio:nth-child(2n+1)::after {
+  right: 4px;
+  left: initial;
+}
+.indicator-rating-neumorphism__radio:hover ~ .indicator-rating-neumorphism__radio::after, .indicator-rating-neumorphism__radio:hover::after, .indicator-rating-neumorphism__radio:checked ~ .indicator-rating-neumorphism__radio::after, .indicator-rating-neumorphism__radio:checked::after {
+  content: url(../star-b.svg);
+}
