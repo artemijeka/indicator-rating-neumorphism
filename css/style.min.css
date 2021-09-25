@@ -101,6 +101,7 @@ body {
           flex-direction: row-reverse;
   position: relative;
   margin: 10px 0;
+  top: 1px;
 }
 .indicator-rating-neumorphism__radio {
   display: -webkit-box;
@@ -124,18 +125,17 @@ body {
 .indicator-rating-neumorphism__radio::after {
   content: url(../star.svg);
   display: inline-block;
-  width: 34px;
-  height: 34px;
-  z-index: 10;
+  width: 30px;
+  height: 30px;
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
   position: absolute;
-  left: 4px;
+  left: 5px;
 }
 .indicator-rating-neumorphism__radio:nth-child(2n+1)::after {
-  right: 4px;
-  left: initial;
+  right: 5px;
+  left: unset;
 }
 .indicator-rating-neumorphism__radio:hover ~ .indicator-rating-neumorphism__radio::after, .indicator-rating-neumorphism__radio:hover::after, .indicator-rating-neumorphism__radio:checked ~ .indicator-rating-neumorphism__radio::after, .indicator-rating-neumorphism__radio:checked::after {
   content: url(../star-b.svg);

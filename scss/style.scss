@@ -78,6 +78,7 @@ body {
 
     position: relative;
     margin: 10px 0;
+    top: 1px;
   }
 
   &__radio {
@@ -95,17 +96,16 @@ body {
     &::after {
       content: url(../star.svg);    
       display: inline-block;
-      width: 34px;
-      height: 34px;
-      z-index: 10;
+      width: 30px;
+      height: 30px;
       transition: 500ms;
 
       position: absolute;
-      left: 4px;
+      left: 5px;
     }
     &:nth-child(2n+1)::after {
-      right: 4px;
-      left: initial;
+      right: 5px;
+      left: unset;
     }
     &:hover ~ &::after,
     &:hover::after,
